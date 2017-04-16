@@ -1,0 +1,15 @@
+.atomignore
+.bundle
+.overcommit.yml
+.idea
+.project
+db/dumps
+db/schema.dump
+docker/local-docker-compose.yml
+environment_variables.rb
+log/*
+tmp/*
+u/*
+*.iml
+dump.rdb
+.DS_Store
