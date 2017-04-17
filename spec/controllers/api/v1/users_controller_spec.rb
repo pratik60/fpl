@@ -2,7 +2,6 @@ require "rails_helper"
 
 RSpec.describe Api::V1::UsersController, type: :controller do
   describe "GET #show" do
-
     before(:each) do
       @user = FactoryGirl.create :user
       auth_headers = @user.create_new_auth_token
@@ -17,11 +16,9 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     it "returns the serialized user attributes" do
       expect(JSON.parse(response.body)["data"]["attributes"]).to eq({"name" => "John Doe", "email" => "test@test.com"})
     end
-
   end
 
   describe "GET #index" do
-
     before(:each) do
       @user = FactoryGirl.create :user
       auth_headers = @user.create_new_auth_token
@@ -37,7 +34,5 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       expect(JSON.parse(response.body)["data"].length).to eq(1)
       expect(JSON.parse(response.body)["data"].first["attributes"]).to eq({"name" => "John Doe", "email" => "test@test.com"})
     end
-
   end
-
 end
