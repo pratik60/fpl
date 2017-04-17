@@ -1,7 +1,5 @@
 class FplService
-
   class << self
-
     def base_url
       "https://fantasy.premierleague.com"
     end
@@ -47,6 +45,5 @@ class FplService
       response = HTTParty.get(player_gw_api)
       JSON.parse(response.body)["entry_history"]["points"]
     end
-
   end
 end

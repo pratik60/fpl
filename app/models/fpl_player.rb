@@ -1,5 +1,4 @@
 class FplPlayer < ApplicationRecord
-
   after_create :add_additional_attributes
 
   def add_additional_attributes
@@ -10,5 +9,4 @@ class FplPlayer < ApplicationRecord
       team_name: player_details["name"]
     })
   end
-
 end
