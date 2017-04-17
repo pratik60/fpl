@@ -3,6 +3,10 @@ AllCops:
     - '**/Rakefile'
     - '**/config.ru'
   Exclude:
+    - 'bin/'
     - 'db/**/*'
     - 'config/**/*'
     - 'script/**/*'
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
