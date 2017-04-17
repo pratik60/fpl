@@ -1,24 +1,14 @@
-# README
+[![Coverage Status](https://coveralls.io/repos/github/pratik60/fpl/badge.svg?branch=master)](https://coveralls.io/github/pratik60/fpl?branch=master)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_____________________.____     
+\_   _____/\______   \    |    
+ |    __)   |     ___/    |    
+ |     \    |    |   |    |___ 
+ \___  /    |____|   |_______ \
+     \/                      \/
 
-Things you may want to cover:
+### Intent
 
-* Ruby version
+### Installation
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Contribution
