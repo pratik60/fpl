@@ -6,7 +6,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       @user = FactoryGirl.create :user
       auth_headers = @user.create_new_auth_token
       request.headers.merge!(auth_headers)
-      get :show, id: @user.id
+      get :show, params: { id: @user.id }
     end
 
     it "responds with 200 status code" do
@@ -14,7 +14,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     end
 
     it "returns the serialized user attributes" do
-      expect(JSON.parse(response.body)["data"]["attributes"]).to eq({"name" => "John Doe", "email" => "test@test.com"})
+      expect(JSON.parse(response.body)["data"]["attributes"]).to eq("name" => "John Doe", "email" => "test@test.com")
     end
   end
 
@@ -23,7 +23,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       @user = FactoryGirl.create :user
       auth_headers = @user.create_new_auth_token
       request.headers.merge!(auth_headers)
-      get :index, id: @user.id
+      get :index, params: { id: @user.id }
     end
 
     it "responds with 200 status code" do
@@ -32,7 +32,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
 
     it "returns the serialized user attributes" do
       expect(JSON.parse(response.body)["data"].length).to eq(1)
-      expect(JSON.parse(response.body)["data"].first["attributes"]).to eq({"name" => "John Doe", "email" => "test@test.com"})
+      expect(JSON.parse(response.body)["data"].first["attributes"]).to eq("name" => "John Doe", "email" => "test@test.com")
     end
   end
 end
