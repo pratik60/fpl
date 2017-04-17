@@ -29,6 +29,10 @@ gem 'devise_token_auth'
 gem 'omniauth'
 # Serializers for returning json
 gem 'active_model_serializers', '~> 0.10.0'
+# Parallel gem to process requests in parallel
+gem 'parallel'
+# Easy way to fetch from requests in the wild web
+gem 'httparty'
 
 
 group :development, :test do
@@ -38,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails', '>= 3.5.0'
   # Use Factory Girl for generating random test data
   gem 'factory_girl_rails'
+  gem 'rubocop'
 end
 
 group :development do
