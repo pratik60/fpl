@@ -1,4 +1,4 @@
 language: ruby
 rvm:
   - 2.3.3
-  - ruby
+before_script: "bundle exec rails db:drop db:create db:migrate"
