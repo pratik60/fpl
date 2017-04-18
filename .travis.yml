@@ -6,3 +6,5 @@ services:
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS fpl_17_test;'
 before_script: "bundle exec rails db:drop db:create db:migrate"
+notifications:
+  email: false
